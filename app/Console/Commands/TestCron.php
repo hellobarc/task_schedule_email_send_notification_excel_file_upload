@@ -41,7 +41,8 @@ class TestCron extends Command
      */
     public function handle()
     {
-        $users = User::where('data_of_birth', today())->get();
+        $today = date('Y-m-d');
+        $users = User::where('date_of_birth', $today)->get();
 
         foreach($users as $user){
             $user_id = $user->id;
@@ -59,7 +60,7 @@ class TestCron extends Command
                 });
             
 
-                $insert_data = DateOfBirth::insert(['user_id' => $user->id, 'year' => $user->data_of_birth]);
+                $insert_data = DateOfBirth::insert(['user_id' => $user->id, 'year' => $user->date_of_birth]);
             }
            
 

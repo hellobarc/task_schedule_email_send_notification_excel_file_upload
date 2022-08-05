@@ -1,12 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Document</title>
-	<style>
-		body
+body
 {
   background-image: linear-gradient(to right top, #1f0537, #380c60, #55108c, #7413bb, #9612eb);
     height: 100%;
@@ -49,7 +41,7 @@ background-position: center; /* Center the image */
 	 color: #331717;
 	 font-style: italic;
 	 text-align: center;
-	 margin: 25px auto 0px auto;
+	 margin: 30px auto 0px auto;
 }
  .card .front {
 	 position: absolute;
@@ -103,24 +95,3 @@ background-position: center; /* Center the image */
     box-shadow: 0px 6px 11px 7px rgba(0, 0, 0, 0.22);
     border-radius: 5px;
 }
-	</style>
-</head>
-<body>
-	
-		<div class="card">
-			<div class="back"></div>
-				<div class="front">
-					<div class="imgset">
-						<img width="100%" src="https://1.bp.blogspot.com/-Mgj9-rbs65E/XfMoPSD5gtI/AAAAAAAAURk/NBokE2gSS2cTSJ2em5lZ5hJDuTtRN7UVwCLcBGAsYHQ/s1600/2713997.png">
-					</div>
-				</div>
-				<div class="text-container">
-					<p id="head">Happy Birthday <br> <span style="color: #9612eb; font-weight:700;">{{$name}}</span></p>
-					<p>I hope your special day will bring you lots of happiness, love, and fun. You deserve them a lot. Enjoy!</p>
-					<p>Hope your day goes great!</p>
-				</div>
-			</div>
-		</div>
-		
-</body>
-</html>

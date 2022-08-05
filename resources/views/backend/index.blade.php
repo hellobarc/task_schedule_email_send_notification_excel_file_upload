@@ -6,7 +6,7 @@
             <div class="row">
                 <div class="col-md-12">
                     @if ($users)
-                       
+                        <a href="{{ url('export-user') }}" class="btn btn-info float-right mb-2">Download all users list</a>
                             <table class="table table-bordered table-stirped">
                                 <thead>
                                     <tr>
@@ -22,7 +22,7 @@
                                         <td>{{ $loop->index+1 }}</td>
                                         <td>{{ $user->name }}</td>
                                         <td>{{ $user->email }}</td>
-                                        <td>{{ $user->data_of_birth }}</td>
+                                        <td>{{ $user->date_of_birth }}</td>
                                     </tr>
                                     @endforeach
                                 </tbody>

@@ -15,11 +15,27 @@ use App\Imports\UsersImport;
 
 class HomeController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
     public function index()
     {
-        // // $user = User::first();
-        // // Notification::send($user, new EmailNotification());
-        // // dd('email notification');
+        $users = User::all();
+        return view('backend.index', compact('users'));
+    }
+
+    public function welcome()
+    {
+       
+        return view('welcome');
+    }
+
+    public function hello()
+    {
+        $user = User::first();
+        Notification::send($user, new EmailNotification());
+        dd('email notification');
         // $users = User::where('data_of_birth', today())->get();
         // foreach($users as $user){
         //      //$insert_data = DateOfBirth::insert(['user_id' => $user->id, 'year' => $user->data_of_birth]);
@@ -59,12 +75,18 @@ class HomeController extends Controller
     //    $users = User::all();
         // return view('backend.emport', compact('users'));
         // dd('export');
-        return Excel::download(new UsersExport, 'downloaded-all-users-file.xlsx');
+        return Excel::download(new UsersExport, 'uploaded-format.xlsx');
     }
     public function emportUser(Request $request)
     {
-    //    $users = User::all();
-        // return view('backend.emport', compact('users'));
+        $this->validate($request, [
+            'file' => 'required|mimes:xls,xlsx',
+        ],
+        [
+            'file.file' =>'Insert a valid file like .xls and .xlsx extension'
+        ]
+        );
+
         Excel::import(new UsersImport, request()->file('file'));
 
        return redirect()->route('user_about');

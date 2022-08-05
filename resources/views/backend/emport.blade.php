@@ -18,8 +18,8 @@
                             </div>
                             <div>
                                 <button type="submit" class="btn btn-success">Submit</button>
-                                <a href="{{ url('export-user') }}" class="btn btn-info float-right">Download</a>
-                            </div>
+                                <a href="{{ asset('download_file/upload_data_here.xlsx') }}" class="btn btn-info float-right">Upload your data here</a>
+                            </div> 
                         </form>
                     </div>
                 </div>
