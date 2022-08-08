@@ -46,15 +46,7 @@ class HomeController extends Controller
         // }
         // dd($user_email);
     }
-    public function sendmail()
-    {
-        $details = [
-            'title' => 'Mail title',
-            'body' => 'Mail Body',
-        ];
-        Mail::to("minar.barc@gmail.com")->send(new TestMail($details));
-        return "Email Sent";
-    }
+   
     public function adminLTE()
     {
        

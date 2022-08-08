@@ -51,12 +51,12 @@ class TestCron extends Command
             if($fetch_data == 0){
                 $name = array(
                     'name'=> $user->name,
-                   
+                    
                     
                 );
 
                 Mail::send('email.testmail', $name, function($message) use($user){
-                    $message->to($user->email)->subject('Cron job testing mail');
+                    $message->to($user->email)->subject('Birthday Greeting From British American Resource Center');
                 });
             
 

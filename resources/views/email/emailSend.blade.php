@@ -8,15 +8,16 @@
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 	{{-- <link rel="stylesheet" href="{{ asset('css/style.css') }}"> --}}
 <style>
-body{
+.section{
     /* background-image: linear-gradient(to right top, #835a08, rgb(158, 109, 9), #e0ab40, #e9b857, #e9bf6a); */
     background: rgb(248,219,168);
 background: linear-gradient(90deg, rgba(248,219,168,1) 0%, rgba(246,203,127,1) 20%, rgba(246,203,127,1) 55%);
-    /* height: 100%;
-    width: 100%; */
+    /* height: 926px;*/
+    /*width: 428px; */
     padding: 0;
     margin: 0;
-    height: 100vh;
+    /*height: 100vh;*/
+    /*text-align: center;*/
 }
 
 
@@ -88,21 +89,22 @@ background: linear-gradient(90deg, rgba(248,219,168,1) 0%, rgba(246,203,127,1) 2
         margin-left: 10px;
     }
     .header-img-2{
-        display: none;
+        width: 100%;
+      
     }
     .heading h1 {
         font-size: 2.7rem;
     }
     .name h1 {
         
-        font-size: 25px;
+        font-size: 1.9rem;
     }
     .text-1 {
-        font-size: 1.8rem;
+        font-size: 1.4rem;
         margin: 0 4%;
     }
     .text-2 {
-        font-size: 1.8rem;
+        font-size: 1.4rem;
         margin: 0 5%;
     }
     .line-img{
@@ -118,23 +120,23 @@ background: linear-gradient(90deg, rgba(248,219,168,1) 0%, rgba(246,203,127,1) 2
 	<section class="section">
 		<div class="header" style="display: flex; justify-content: space-between;">
             <div class="header-image-box">
-                <img src="{{ url('testing_laravel/public/images/logo-Update.png') }}" alt="" class="header-img-1">
+                <img src="https://hellobarc.com/birtdaygreeting/images/logo-Update.png" alt="" class="header-img-1">
             </div>
         
             <div class="header-image-box">
-                <img src="{{ url('testing_laravel/public/images/logo.png') }}" alt="" class="header-img-2">
+                <img src="https://hellobarc.com/birtdaygreeting/images/logo.png" alt="" class="header-img-2">
             </div>
         </div>
 	
 		<div class="greeting-box">
-			<div class="line">
-				<img src="{{ url('testing_laravel/public/images/line.png') }}" alt="" class="line-img">
-			</div>
+			<!--<div class="line">-->
+			<!--	<img src="https://hellobarc.com/birtdaygreeting/images/line.png" alt="" class="line-img">-->
+			<!--</div>-->
 			<div class="heading">
 				<h1 >Happy Birthday</h1>
 			</div>
 			<div class="name">
-				<h1>**{{$name}}**</h1>
+				<h1>**{{$details['name']}}**</h1>
 			</div>
 			<div class="text">
 				<p class="text-1">The way you throw yourself into your study and give your best is truly praiseworthy!</p> <br>
@@ -143,7 +145,7 @@ background: linear-gradient(90deg, rgba(248,219,168,1) 0%, rgba(246,203,127,1) 2
 		</div>
 	
 		<div class="greeting-image-box">
-			<img src="{{ url('testing_laravel/public/images/05.png') }}" alt="" class="greeting-img">
+			<img src="https://hellobarc.com/birtdaygreeting/images/05.png" alt="" class="greeting-img">
 		</div>
 				
 	</section>

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\GreetingController;
 use App\Http\Controllers\Auth\LoginController;
 
 /*
@@ -16,7 +17,7 @@ use App\Http\Controllers\Auth\LoginController;
 */
 
 Route::get('/hello', [HomeController::class, 'hello']);
-Route::get('/mail', [HomeController::class, 'sendmail']);
+Route::get('/mail', [GreetingController::class, 'sendmail']);
 Route::get('/admin-lte', [HomeController::class, 'adminLTE']);
 Route::get('/all-user', [HomeController::class, 'allUser'])->name('user_about');
 Route::get('/excel', [HomeController::class, 'excel'])->name('home');

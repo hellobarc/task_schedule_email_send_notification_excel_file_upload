@@ -28,6 +28,7 @@ class TestMail extends Mailable
      */
     public function build()
     {
-        return $this->subject('mail from')->view('email.testmail');
+        return $this->subject('Mail From British American Resource Center For Birthday Greeting')->view('email.emailSend');
     }
+    
 }
