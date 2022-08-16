@@ -63,7 +63,35 @@
               </li>
             </ul>
           </li> --}}
-         
+
+
+         {{-- list group --}}
+         <li class="nav-item">
+          <a href="{{ url('/all-group') }}" class="nav-link">
+            <i class="fas fa-users"></i>&nbsp;&nbsp;
+            <p>
+              Manage Group
+              <i class="fas fa-angle-left right"></i>
+              {{-- <span class="badge badge-info right">6</span> --}}
+            </p>
+          </a>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a href="{{ url('/all-group') }}" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>All Group</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="{{ url('/create-group') }}" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Create a New Group</p>
+              </a>
+            </li>
+            
+          </ul>
+        </li>
+          {{-- Manage student --}}
           <li class="nav-item">
             <a href="{{ url('/all-user') }}" class="nav-link">
               <i class="nav-icon fa fa-user"></i>
@@ -77,16 +105,92 @@
               <li class="nav-item">
                 <a href="{{ url('/all-user') }}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Manage</p>
+                  <p>All Stuednt</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="{{ url('/excel') }}" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>Create</p>
+                  <p>Create Student List</p>
                 </a>
               </li>
               
+            </ul>
+          </li>
+          {{-- Event manage --}}
+          <li class="nav-item">
+            <a href="{{ url('/all-event') }}" class="nav-link">
+              <i class="fas fa-calendar-alt"></i>&nbsp;&nbsp;
+              <p>
+                Manage Event
+                <i class="fas fa-angle-left right"></i>
+                {{-- <span class="badge badge-info right">6</span> --}}
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{ url('/all-event') }}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>All Event</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ url('/create-event') }}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Create a New Event</p>
+                </a>
+              </li>
+              
+            </ul>
+          </li>
+          {{-- Email templete --}}
+          <li class="nav-item">
+            <a href="{{ url('/all-event-email') }}" class="nav-link">
+              <i class="fas fa-envelope"></i>&nbsp;&nbsp;
+              <p>
+                Manage Email
+                <i class="fas fa-angle-left right"></i>
+                {{-- <span class="badge badge-info right">6</span> --}}
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{ url('/all-event-email') }}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>All Email</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ url('/create-event-email') }}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Create Email Templete</p>
+                </a>
+              </li>
+            </ul>
+          </li>
+          {{-- campaign create --}}
+          <li class="nav-item">
+            <a href="{{ url('/all-campaign') }}" class="nav-link">
+              <i class="fas fa-map-marked-alt"></i>&nbsp;&nbsp;
+              <p>
+               Campaign
+                <i class="fas fa-angle-left right"></i>
+                {{-- <span class="badge badge-info right">6</span> --}}
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="{{ url('/all-campaign') }}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>All Campaign</p>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href="{{ url('/create-campaign') }}" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Create a new campaign</p>
+                </a>
+              </li>
             </ul>
           </li>
            <li class="nav-item mt-5 text-center">

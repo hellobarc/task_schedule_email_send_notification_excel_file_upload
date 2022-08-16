@@ -14,7 +14,7 @@ class GreetingController extends Controller
     {
         $today = date('Y-m-d');
         $users = User::where('date_of_birth', $today)->get();
-        dd($users);
+        // dd($users);
         foreach($users as $user){
             $user_id = $user->id;
             $fetch_data = DateOfBirth::where('user_id', $user_id)->count();
@@ -34,6 +34,9 @@ class GreetingController extends Controller
             
 
                 $insert_data = DateOfBirth::insert(['user_id' => $user->id, 'year' => $user->date_of_birth]);
+            }else{
+                echo "Already Sent".$user->name;
+                echo "<br>";
             }
         // $details = [
         //     'title' => 'Mail title',
@@ -41,6 +44,6 @@ class GreetingController extends Controller
         // ];
         // Mail::to( n"minar.barc@gmail.com")->send(new TestMail($details));
         }
-        return "Email Sent";
+        return 200;
     }
 }

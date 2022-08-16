@@ -9,9 +9,23 @@
                     <div class="card-header">
                         <h2>File Upload</h2>
                     </div>
+                    
                     <div class="card-body">
+                     {{-- {{ dd ($group_name)}} --}}
                         <form action="{{ url('/emport-user')}}" method="POST" enctype="multipart/form-data">
                             @csrf
+                            <div class="form-group">
+                                <label>Groups<span class="required">*</span></label>
+                                {{-- <input type="text" class="form-control" name="live_session_topics" required> --}}
+                                <select class="form-control custom-select role" name="group_info"  required>
+                                    <option value="">Please select a group</option>
+                                    @foreach ( $group_info as $info)
+                                        <option value="{{ $info->id }}">{{ $info->group_name}}</option>
+                                    @endforeach
+                                    
+                                    
+                                </select>
+                            </div>
                             <div class="form-group">
                                 <label for="file">Excel File Upload</label>
                                 <input type="file" name="file" class="form-control" id="file" aria-describedby="fileHelp" placeholder="Enter your file">

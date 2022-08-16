@@ -24,6 +24,34 @@ Route::get('/excel', [HomeController::class, 'excel'])->name('home');
 Route::post('/emport-user', [HomeController::class, 'emportUser']);
 Route::get('/export-user', [HomeController::class, 'exportUser']);
 
+//group management
+Route::get('/all-group', [HomeController::class, 'allGroup'])->name('all_group');
+Route::get('/create-group', [HomeController::class, 'createGroup']);
+Route::post('/save-group', [HomeController::class, 'saveGroup']);
+Route::get('/group-edit/{id}', [HomeController::class, 'editGroup']);
+Route::post('/group-update/{id}', [HomeController::class, 'updateGroup']);
+Route::post('/group-delete/{id}', [HomeController::class, 'deleteGroup']);
+//event management
+Route::get('/all-event', [HomeController::class, 'allEvent'])->name('all_event');
+Route::get('/create-event', [HomeController::class, 'createEvent']);
+Route::post('/save-event', [HomeController::class, 'saveEvent']);
+Route::get('/event-edit/{id}', [HomeController::class, 'editEvent']);
+Route::post('/event-update/{id}', [HomeController::class, 'updateEvent']);
+Route::post('/event-delete/{id}', [HomeController::class, 'deleteEvent']);
+// event email sending route
+Route::get('/all-event-email', [HomeController::class, 'allEventEamil'])->name('all_event_email');
+Route::get('/create-event-email', [HomeController::class, 'createEventEamil']);
+Route::post('/save-event-email', [HomeController::class, 'saveEventEamil']);
+Route::get('/event-email-edit/{id}', [HomeController::class, 'editEventEamil']);
+Route::post('/event-email-update/{id}', [HomeController::class, 'updateEventEamil']);
+Route::post('/event-email-delete/{id}', [HomeController::class, 'deleteEventEamil']);
+// create a campaign route
+Route::get('/all-campaign', [HomeController::class, 'allCampaign'])->name('all_campaign');
+Route::get('/create-campaign', [HomeController::class, 'createCampaign']);
+Route::post('/save-campaign', [HomeController::class, 'saveCampaign']);
+Route::get('/campaign-edit/{id}', [HomeController::class, 'editCampaign']);
+Route::post('/campaign-update/{id}', [HomeController::class, 'updateCampaign']);
+Route::post('/campaign-delete/{id}', [HomeController::class, 'deleteCampaign']);
 
 // Auth::routes();
 Auth::routes([
