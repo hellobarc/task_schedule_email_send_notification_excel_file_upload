@@ -17,7 +17,10 @@ use App\Http\Controllers\Auth\LoginController;
 */
 
 Route::get('/hello', [HomeController::class, 'hello']);
+//mail sending route with controller
 Route::get('/mail', [GreetingController::class, 'sendmail']);
+Route::get('/email', [GreetingController::class, 'emailSending']);
+
 Route::get('/admin-lte', [HomeController::class, 'adminLTE']);
 Route::get('/all-user', [HomeController::class, 'allUser'])->name('user_about');
 Route::get('/excel', [HomeController::class, 'excel'])->name('home');

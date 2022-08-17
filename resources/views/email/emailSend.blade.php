@@ -136,7 +136,7 @@ background: linear-gradient(90deg, rgba(248,219,168,1) 0%, rgba(246,203,127,1) 2
 				<h1 >Happy Birthday</h1>
 			</div>
 			<div class="name">
-				<h1>**{{$details['name']}}**</h1>
+				<h1>**{{$name}}**</h1>
 			</div>
 			<div class="text">
 				<p class="text-1">The way you throw yourself into your study and give your best is truly praiseworthy!</p> <br>
