@@ -17,6 +17,7 @@
                                 <label for="campaign_name">Campaign Name</label>
                                 <input type="text" class="form-control" id="campaign_name" name="campaign_name" placeholder="Enter campaign">
                             </div>
+
                             <div class="form-group">
                                 <label for="group_id">Group</label>
                                 <select class="form-control custom-select role" name="group_id"  required>
@@ -27,19 +28,35 @@
                                 </select>
                             </div>
                             <div class="form-group">
-                                <label for="message_id">Campaign Message</label>
+                                <label for="message_id">Create a email subject</label>
                                 {{-- <textarea class="form-control" id="event_email_body" name="event_email_body" placeholder="Write here...."></textarea> --}}
+                                <input type="text" class="form-control" id="email_subject" name="email_subject" placeholder="Enter campaign">
+                            </div>
+                            <div class="form-group">
+                                <label for="message_id">Select a email templete</label>
+                                {{-- <textarea class="form-control" id="event_email_body" name="event_email_body" placeholder="Write here...."></textarea> --}}
+                                <select class="form-control custom-select role" name="message_id"  required>
+                                    <option value="">Please select a email templete</option>
+                                    <option value="1">Templete 1</option>
+                                    <option value="2">Templete 2</option>
+                                    <option value="3">Templete 3</option>
+                                </select>
+                            </div>
+                            {{-- <div class="form-group">
+                                <label for="message_id">Campaign Message</label>
                                 <select class="form-control custom-select role" name="message_id"  required>
                                     <option value="">Please select a message</option>
                                     @foreach ( $message_info as $message)
                                         <option value="{{ $message->id }}">{{$message->event_email_subject}}</option>
                                     @endforeach
                                 </select>
-                            </div>
+                            </div> --}}
+
                             <div class="form-group">
                                 <label for="campaign_date">Campaign Start Date</label>
                                 <input type="date" class="form-control" id="campaign_date" name="campaign_date" placeholder="Enter campaign date">
                             </div>
+
                             <div>
                                 <button type="submit" class="btn btn-lg btn-success">Submit</button>
                             </div>

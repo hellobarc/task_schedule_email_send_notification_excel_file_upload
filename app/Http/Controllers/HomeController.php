@@ -309,6 +309,7 @@ class HomeController extends Controller
         $request->validate([
             'campaign_name' => 'required',
             'group_id' => 'required',
+            'email_subject' => 'required',
             'message_id' => 'required',
             'campaign_date' => 'required',
  
@@ -316,6 +317,7 @@ class HomeController extends Controller
         [
             'campaign_name.required' => 'Please Provide campaign name',
             'group_id.required' => 'Please Provide group id',
+            'email_subject.required' => 'Please wirte a email subject',
             'message_id.required' => 'Please Provide message id',
             'campaign_date.required' => 'Please Provide campaign date',
         ]);
@@ -323,6 +325,7 @@ class HomeController extends Controller
         $campaign = new Campaign();
         $campaign->campaign_name = $request->campaign_name;
         $campaign->group_id = $request->group_id;
+        $campaign->email_subject = $request->email_subject;
         $campaign->message_id = $request->message_id;
         $campaign->campaign_date = $request->campaign_date;
         $campaign->save();
@@ -342,6 +345,7 @@ class HomeController extends Controller
         $request->validate([
             'campaign_name' => 'required',
             'group_id' => 'required',
+            'email_subject' => 'required',
             'message_id' => 'required',
             'campaign_date' => 'required',
  
@@ -349,6 +353,7 @@ class HomeController extends Controller
         [
             'campaign_name.required' => 'Please Provide campaign name',
             'group_id.required' => 'Please Provide group id',
+            'email_subject.required' => 'Please write a email subject',
             'message_id.required' => 'Please Provide message id',
             'campaign_date.required' => 'Please Provide campaign date',
         ]);
@@ -356,6 +361,7 @@ class HomeController extends Controller
         $campaign = Campaign::find($id);
         $campaign->campaign_name = $request->campaign_name;
         $campaign->group_id = $request->group_id;
+        $campaign->email_subject = $request->email_subject;
         $campaign->message_id = $request->message_id;
         $campaign->campaign_date = $request->campaign_date;
         $campaign->save();

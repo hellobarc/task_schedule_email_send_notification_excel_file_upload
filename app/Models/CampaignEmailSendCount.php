@@ -5,14 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Campaign extends Model
+class CampaignEmailSendCount extends Model
 {
     use HasFactory;
+
     protected $fillable = [
-        'campaign_name',
-        'group_id',
-        'email_subject',
-        'message_id',
-        'campaign_date',
+        'campaign_id',
+        'total_user',
+        'email_count',
     ];
 }

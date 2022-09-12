@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\GreetingController;
+use App\Http\Controllers\emailSendingController;
 use App\Http\Controllers\Auth\LoginController;
 
 /*
@@ -18,15 +19,16 @@ use App\Http\Controllers\Auth\LoginController;
 
 Route::get('/hello', [HomeController::class, 'hello']);
 //mail sending route with controller
-Route::get('/mail', [GreetingController::class, 'sendmail']);
-Route::get('/email', [GreetingController::class, 'emailSending']);
+// Route::get('/mail', [GreetingController::class, 'sendmail']);
+// Route::get('/email', [GreetingController::class, 'emailSending']);
+Route::get('/email-sending', [EmailSendingController::class, 'emailSend'])->name('email-sending');
 
 Route::get('/admin-lte', [HomeController::class, 'adminLTE']);
 Route::get('/all-user', [HomeController::class, 'allUser'])->name('user_about');
 Route::get('/excel', [HomeController::class, 'excel'])->name('home');
 Route::post('/emport-user', [HomeController::class, 'emportUser']);
 Route::get('/export-user', [HomeController::class, 'exportUser']);
-
+// Admin panel start
 //group management
 Route::get('/all-group', [HomeController::class, 'allGroup'])->name('all_group');
 Route::get('/create-group', [HomeController::class, 'createGroup']);
@@ -55,7 +57,7 @@ Route::post('/save-campaign', [HomeController::class, 'saveCampaign']);
 Route::get('/campaign-edit/{id}', [HomeController::class, 'editCampaign']);
 Route::post('/campaign-update/{id}', [HomeController::class, 'updateCampaign']);
 Route::post('/campaign-delete/{id}', [HomeController::class, 'deleteCampaign']);
-
+// Admin panel end
 // Auth::routes();
 Auth::routes([
     'register' => false, // Registration Routes...
